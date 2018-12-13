@@ -12,6 +12,15 @@
 			<name>Nexus aliyun</name>
 			<url>http://maven.aliyun.com/nexus/content/groups/public</url>
 		</repository>
+
+		<!-- 专业下载bdb依赖添加的仓库源 -->
+		<repository>
+			<id>oracleReleases</id>
+			<name>Oracle Released Java Packages</name>
+			<url>http://download.oracle.com/maven</url>
+			<layout>default</layout>
+		</repository>
+
 	</repositories>
 	<dependencies>
 		<!-- 引入hadoop-cli-2.7.4依赖 -->
@@ -33,6 +42,13 @@
 			<artifactId>fastjson</artifactId>
 			<version>1.2.15</version>
 		</dependency>
+		
+		<!-- 加入java bdb 3.3.75/6.4依赖 -->
+      <dependency>
+           <groupId>com.sleepycat</groupId>
+        <artifactId>je</artifactId>
+           <version>3.3.75</version>
+      </dependency>
 
 	</dependencies>
 	<build>
